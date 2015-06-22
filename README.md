@@ -16,7 +16,7 @@ dev-vcs/git dev-games/irrlicht dev-util/cmake dev-libs/jsoncpp media-libs/openal
 =========
 
 * Зайти в директорию, где хотите разместить папку с игрой.
-Запустить команду 'git clone https://github.com/maximsecret/minetest-updater-scripts.git' .
+Запустить команду `git clone https://github.com/maximsecret/minetest-updater-scripts.git` .
 
 * Папку minetest-updater-scripts можете переименовать.
 
