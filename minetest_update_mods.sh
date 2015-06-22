@@ -1,3 +1,9 @@
+echo "Проверка на новую версию minetest_game" &&
+cd minetest-game/games/minetest_game &&
+git pull --rebase &&
+cd ../../../ &&
+
+
 cd minetest-game/mods &&
 
 echo "Pipeworks" &&
