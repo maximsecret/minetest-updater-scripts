@@ -1,6 +1,6 @@
 echo "Проверка на новую версию minetest_game" &&
 cd minetest-game/games/minetest_game &&
-git pull --rebase &&
+git pull &&
 cd ../../../ &&
 
 
