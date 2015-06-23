@@ -32,3 +32,8 @@ dev-vcs/git dev-games/irrlicht dev-util/cmake dev-libs/jsoncpp media-libs/openal
 * minetest_prepare_mods.sh - Для подготовки модов в minetest-game (То есть после выполнения скрипта minetest_install.sh)
 
 * minetest_update_mods.sh - Для обновления модов, сделанных minetest_prepare_mods.sh.
+
+Идея:
+=====
+
+Сделать программу на C++ и файлик с репозиториями, которая эта программа будет смотреть.
