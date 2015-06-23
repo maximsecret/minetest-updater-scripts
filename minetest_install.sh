@@ -23,7 +23,7 @@ cmake ../minetest -DCMAKE_INSTALL_PREFIX="/" -DRUN_IN_PLACE=TRUE -DBUILD_SERVER=
 
 echo "Пожалуйста напишите флаги вашего процессора в cmake-gui программе. CMAKE_CXX_FLAGS и CMAKE_C_FLAGS, чтобы игра была под ваш процессор. (Если вам это надо)" &&
 cmake-gui ../minetest  &&
-make -j4 &&
+make -j$((`cat /proc/cpuinfo | grep processor | wc -l`+1)) && #Компилируем, определяя количество ваших ядер.
 
 echo "Установка игры в директорию minetest-game" &&
 make install DESTDIR=../minetest-game  &&
