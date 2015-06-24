@@ -5,7 +5,7 @@ git pull &&
 
 echo "Проверка на новую версию minetest'a" &&
 cd minetest &&
-git pull --rebase &&
+git pull &&
 git submodule foreach git pull --rebase origin master &&
 cd .. &&
 
