@@ -1,9 +1,4 @@
-echo "Стандартный режим, minetest_game" &&
-cd minetest-game/games &&
-git clone https://github.com/minetest/minetest_game.git && # Без Русификатора
-#git clone -b translation https://github.com/maximsecret/minetest_game.git && # С Русификатором.
-
-cd ../mods &&
+cd minetest-game/mods &&
 
 git clone https://github.com/VanessaE/pipeworks.git  &&
 
@@ -60,4 +55,3 @@ cd mymods_test &&
 git clone https://github.com/maximsecret/extra_utilities.git &&
 
 echo "END!"
-

@@ -15,15 +15,15 @@ dev-vcs/git dev-games/irrlicht dev-util/cmake dev-libs/jsoncpp media-libs/openal
 Установка
 =========
 
-* Зайти в директорию, где хотите разместить папку с игрой.
-Запустить команду `git clone https://github.com/maximsecret/minetest-updater-scripts.git`
+* Зайдите в директорию, где хотите разместить папку с игрой.
+Запустите команду `git clone https://github.com/maximsecret/minetest-updater-scripts.git`
 
 * Папку minetest-updater-scripts можете переименовать.
 
 
-* minetest_prepare.sh - Для подготовки рабочей директории minetest.
+* minetest_prepare.sh - Для подготовки minetest к установке.
 
-* minetest_install.sh - Для установки minetest из рабочей директории и для проверки обновления скриптов. 
+* minetest_install.sh - Для установки minetest и для проверки обновления скриптов.
 Желательно поcтавить CMAKE_CXX_FLAGS и CMAKE_C_FLAGS во время установки(в программе cmake-gui), для вашего процессора.
 [AMD](http://gentoo-en.vfose.ru/wiki/Safe_Cflags/AMD)
 [Intel](http://gentoo-en.vfose.ru/wiki/Safe_Cflags/Intel)
@@ -31,7 +31,7 @@ dev-vcs/git dev-games/irrlicht dev-util/cmake dev-libs/jsoncpp media-libs/openal
 
 * minetest_prepare_mods.sh - Для подготовки модов в minetest-game (То есть после выполнения скрипта minetest_install.sh)
 
-* minetest_update_mods.sh - Для обновления модов, сделанных minetest_prepare_mods.sh.
+* minetest_update_mods.sh - Для обновления модов, сделанных скриптом minetest_prepare_mods.sh.
 
 Идея:
 =====

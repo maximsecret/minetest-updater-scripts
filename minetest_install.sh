@@ -1,16 +1,19 @@
 #Проверка на новую версию
 
-echo "Проверка на новую версию скриптов..."  &&
+echo "Проверяем на новую версию скриптов... P.S. Если конечно есть папка .git"  &&
 git pull &&
 
-echo "Проверка на новую версию minetest'a" &&
+echo "Проверяем на наличие новой версию игры..." &&
 cd minetest &&
 git pull &&
 git submodule foreach git pull --rebase origin master &&
 cd .. &&
 
-#Сборка игры.
-#rm -R build &&
+echo "Проверяем на новую версию игровой режима minetest_game"
+cd minetest-game/games/minetest_game &&
+git pull &&
+cd ../../../ &&
+
 echo "Начало компиляции" &&
 mkdir build &&
 cd build &&
@@ -21,7 +24,8 @@ cd build &&
 #Без флагов компиляции.
 cmake ../minetest -DCMAKE_INSTALL_PREFIX="/" -DRUN_IN_PLACE=TRUE -DBUILD_SERVER=TRUE -DENABLE_GETTEXT=TRUE -DENABLE_GLES=TRUE &&
 
-echo "Пожалуйста напишите флаги вашего процессора в cmake-gui программе. CMAKE_CXX_FLAGS и CMAKE_C_FLAGS, чтобы игра была под ваш процессор. (Если вам это надо)" &&
+echo "Напишите флаги вашего процессора в cmake-gui программе. CMAKE_CXX_FLAGS и CMAKE_C_FLAGS, чтобы игра была под ваш процессор. (Если вам это надо)" &&
+echo "После этого нажмите на кнопки Configure и Generate и закройте окно."
 cmake-gui ../minetest  &&
 make -j$((`cat /proc/cpuinfo | grep processor | wc -l`+1)) && #Компилируем, определяя количество ваших ядер.
 
@@ -33,18 +37,3 @@ echo "Удаление build файлов." &&
 rm -R build &&
 
 echo "END"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
