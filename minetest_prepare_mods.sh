@@ -39,8 +39,6 @@ git clone https://github.com/kaeza/minetest-intllib.git &&
 mv minetest-intllib intllib &&
 
 
-git clone https://bitbucket.org/LemonLake/factory.git &&
-
 git clone https://github.com/cornernote/minetest-craft_guide.git &&
 mv minetest-craft_guide craft_guide &&
 
