@@ -22,7 +22,7 @@ cd build &&
 #cmake ../minetest -DCMAKE_INSTALL_PREFIX="/" -DRUN_IN_PLACE=TRUE -DBUILD_SERVER=TRUE -DENABLE_GETTEXT=TRUE -DENABLE_GLES=TRUE -DCMAKE_CXX_FLAGS="ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА" -DCMAKE_C_FLAGS="ЗДЕСЬ МОГЛА БЫТЬ ВАША РЕКЛАМА"  &&
 
 #Без флагов компиляции.
-cmake ../minetest -DCMAKE_INSTALL_PREFIX="/" -DRUN_IN_PLACE=TRUE -DBUILD_SERVER=TRUE -DENABLE_GETTEXT=TRUE -DENABLE_GLES=TRUE &&
+cmake ../minetest -DCMAKE_INSTALL_PREFIX="/" -DRUN_IN_PLACE=TRUE -DBUILD_SERVER=TRUE &&
 
 echo "Напишите флаги вашего процессора в cmake-gui программе. CMAKE_CXX_FLAGS и CMAKE_C_FLAGS, чтобы игра была под ваш процессор. (Если вам это надо)" &&
 echo "После этого нажмите на кнопки Configure и Generate и закройте окно."

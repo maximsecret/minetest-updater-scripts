@@ -76,11 +76,6 @@ cd intllib &&
 git pull &&
 cd .. &&
 
-echo "Factory" &&
-cd factory &&
-git pull &&
-cd .. &&
-
 echo "craft guide" &&
 cd craft_guide &&
 git pull &&
