@@ -12,10 +12,13 @@ build-essential libirrlicht-dev libgmp-dev libleveldb-dev libluajit-5.1-dev libh
 
 dev-vcs/git dev-games/irrlicht dev-util/cmake dev-libs/jsoncpp media-libs/openal media-libs/freetype
 
+* Для Arch-based дистрибутивов(Может быть не всё)
+
+irrlicht
 
 Установка
 =========
-Запустить `python main.py` в терминале.
+Запустить `./main.py` в терминале. В случае ошибки сначала попробовать сделать `chmod +x ./main.py`
 
 
 ----

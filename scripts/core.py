@@ -2,7 +2,8 @@
 
 import os
 import shutil
-import colorama
+
+c_flags= "-O2 -march=native -mtune=native -pipe" #Флаги компиляции под ваш процессор. Можете убрать "-march=native -mtune=native" Если вам это не нужно.
 
 def get_path():
 	print(os.path.abspath(".") + "/minetest-game")
@@ -26,14 +27,14 @@ def compile_source():
 	createDIR("build")
 
 	print("Конфигурируем...")
-	os.system("cd build && cmake ../minetest -DCMAKE_INSTALL_PREFIX=\"/\" -DRUN_IN_PLACE=TRUE -DBUILD_SERVER=TRUE")
+	os.system("cd build && cmake ../minetest -DCMAKE_INSTALL_PREFIX=\"/\" -DRUN_IN_PLACE=TRUE -DBUILD_SERVER=TRUE -DCMAKE_CXX_FLAGS_RELEASE=\"" + c_flags + "\" -DCMAKE_C_FLAGS_RELEASE=\"" + c_flags + "\"" )
 
 	print("Можете сконфигурировать самостоятельно... Configure > Generate")
 	print("И потом просто закрыть окно.")
 	os.system("cd build && cmake-gui ../minetest")
 
 	print("Компилируем...")
-	os.system("cd build && make -j$((`cat /proc/cpuinfo | grep processor | wc -l`+1)) ")
+	os.system("cd build && make -j$((`cat /proc/cpuinfo | grep processor | wc -l`)) ")
 
 	print("Установка...")
 	os.system("cd build && make install DESTDIR=../minetest-game")

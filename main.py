@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 # coding: utf-8
 
 from scripts import core
@@ -27,7 +27,8 @@ def main():
 
 			break
 		elif inValue in ['update', 'UPDATE', 'Update', "uPDATE"]:
-			print("It's Work! update")
+			core.check_source()
+			core.check_game_mode()
 			break
 		elif inValue in ['1']:
 			core.get_source()
